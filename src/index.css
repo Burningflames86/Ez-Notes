@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,body{
+    overflow-x: hidden;
+   height: 100%;
+   background-color: rgb(192 132 252);
+}
+
+.button{
+    position: relative;
+}
+.button::after{
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom:0;
+    left:0;
+    background-color: black;
+    transition: width 0.25s linear;
+}
+.button:hover::after{
+    width: 100%;
+    height: 2px;
+}
+nav{
+    justify-content: center;
+    align-items: center;
+}
+.users{
+    display:grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap:3%;
+}
+
+.oldnotes{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+  .notes{
+    height: 12rem;
+    scrollbar-width: none;
+    }
+    .notes::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
+    }
+
+  form{
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .pub::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+    }
+
+    .lognotes{
+        display:flex;
+        width: 95vw;
+        justify-content: center; 
+        column-gap:7rem;
+        row-gap:7rem;
+    }
+
+@media screen and (max-width: 966px) {
+    body{
+        background-color: transparent;
+    }
+    .oldnotes{
+        display: grid;
+        grid-template-columns: none;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .notes{
+        width: 100%;
+        height: 14rem;
+    }
+    form{
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    .logout{
+        padding-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .users{
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        row-gap: 20px;
+    }
+}
+
+@media screen and (max-width:920px) {
+    .lognotes{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        column-gap: 10%;
+        row-gap: 2rem;
+    }
+}
+@media screen and (max-width:477px) {
+    .protext{
+        height: 0;
+        visibility: hidden;
+    }
+    .prohead{
+        height: 0;
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,6 @@
+. In User Section, logged in user must come on top  - DONE
+. Retrieve all docs when clicked on a particular user.  - DONE
+. Add gmail pfp on top right corner. - DONE
+. Fix Logout - DONE
+. Fix Unsub
+. Improve frontend.
